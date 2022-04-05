@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import { Grid } from "@mui/material";
+import InputBox from "./InputBox";
 
 function App() {
+  const [word, setWord] = useState("tutta");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <Grid container spacing={2} >
+        <InputBox word={word} setWord={setWord}/>
+      </Grid>
     </div>
   );
 }
