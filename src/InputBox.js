@@ -50,8 +50,8 @@ function InputBox({ word, setWord }) {
     }
 
   return (
-    <Grid item xs={8}>
-      <Grid container spacing={12}>
+    <Grid item xs={12}>
+      <Grid container item spacing={12}>
         <Grid item xs={2}>
           <TextField type="text" inputRef={input1} color={letters[0].color} onChange={(args) => {
               setLetter(0, args);
